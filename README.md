@@ -48,16 +48,16 @@
 │           ├── DIAS Information Levels - Attributes 2017.xlsx
 │           ├── Udacity_MAILOUT_052018_TEST.tar.xz                     - Raw testing dataset.
 │           └── Udacity_MAILOUT_052018_TRAIN.tar.xz                    - Raw training dataset
-├── notebooks                                                - Jupyter notebooks
-│   ├── 00_common.ipynb                                          - Common code that is imported in other notebooks.
-│   ├── 01_data-exploration.ipynb                                - Exploratory data analysis notebook.
-│   ├── 02_data-processing-pipeline.ipynb                        - Data processing pipeline notebook.
-│   └── 03_classification-model.ipynb                            - Model training, tuning and evaluation notebook.
+├── notebooks                          - Jupyter notebooks
+│   ├── 00_common.ipynb                     - Common code that is imported in other notebooks.
+│   ├── 01_data-exploration.ipynb           - Exploratory data analysis notebook.
+│   ├── 02_data-processing-pipeline.ipynb   - Data processing pipeline notebook.
+│   └── 03_classification-model.ipynb       - Model training, tuning and evaluation notebook.
 ├── output/                                 - Project documentation directory.
 │   ├── figures/                            - Project output plots and graphs.
 │   ├── submissions                         - Predictions to be submitted to kaggle. 
 │   └── tables                              - Project output latex tables and statistics.
-└── src                              - Packaged python source code.
+└── src                                - Packaged python source code.
     ├── helper_functions.py                 - Helper functions.
     ├── metadata.py                         - Metadata class.
     └── transformers.py                     - Scikit-Learn based transformers.
