@@ -13090,7 +13090,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Run-Common-Code-Notebook" data-toc-modified-id="Run-Common-Code-Notebook-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Run Common Code Notebook</a></span></li><li><span><a href="#Package-Imports" data-toc-modified-id="Package-Imports-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Package Imports</a></span><ul class="toc-item"><li><span><a href="#Import-Sagemaker-and-Boto3" data-toc-modified-id="Import-Sagemaker-and-Boto3-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Import Sagemaker and Boto3</a></span></li><li><span><a href="#Import-Custom-Packages" data-toc-modified-id="Import-Custom-Packages-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Import Custom Packages</a></span></li></ul></li><li><span><a href="#Global-Variables" data-toc-modified-id="Global-Variables-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Global Variables</a></span></li><li><span><a href="#Load-Raw-Data" data-toc-modified-id="Load-Raw-Data-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Load Raw Data</a></span></li><li><span><a href="#Creating-The-Preprocessing-Pipeline" data-toc-modified-id="Creating-The-Preprocessing-Pipeline-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Creating The Preprocessing Pipeline</a></span></li><li><span><a href="#Data-Preprocessing" data-toc-modified-id="Data-Preprocessing-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Data Preprocessing</a></span><ul class="toc-item"><li><span><a href="#Transforming-Train-and-Test-Data" data-toc-modified-id="Transforming-Train-and-Test-Data-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Transforming Train and Test Data</a></span></li><li><span><a href="#Export-csv-files-to-be-used-by-AWS-sagemaker-algorithms:" data-toc-modified-id="Export-csv-files-to-be-used-by-AWS-sagemaker-algorithms:-6.2"><span class="toc-item-num">6.2&nbsp;&nbsp;</span>Export csv files to be used by AWS sagemaker algorithms:</a></span></li></ul></li><li><span><a href="#Benchmark-Logistic-Regression-Model" data-toc-modified-id="Benchmark-Logistic-Regression-Model-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Benchmark Logistic Regression Model</a></span><ul class="toc-item"><li><span><a href="#Benchmark-Model-Definition-and-Training" data-toc-modified-id="Benchmark-Model-Definition-and-Training-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Benchmark Model Definition and Training</a></span></li><li><span><a href="#Testing-Benchmark-Model-on-Kaggle" data-toc-modified-id="Testing-Benchmark-Model-on-Kaggle-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Testing Benchmark Model on Kaggle</a></span></li></ul></li><li><span><a href="#XGBoost-Model-using-AWS-Sagemaker" data-toc-modified-id="XGBoost-Model-using-AWS-Sagemaker-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>XGBoost Model using AWS Sagemaker</a></span><ul class="toc-item"><li><span><a href="#Copy-Data-to-S3-Bucket" data-toc-modified-id="Copy-Data-to-S3-Bucket-8.1"><span class="toc-item-num">8.1&nbsp;&nbsp;</span>Copy Data to S3 Bucket</a></span></li><li><span><a href="#Define-S3-Data-Channel-Inputs" data-toc-modified-id="Define-S3-Data-Channel-Inputs-8.2"><span class="toc-item-num">8.2&nbsp;&nbsp;</span>Define S3 Data Channel Inputs</a></span></li><li><span><a href="#Hyperparameter-Tuning" data-toc-modified-id="Hyperparameter-Tuning-8.3"><span class="toc-item-num">8.3&nbsp;&nbsp;</span>Hyperparameter Tuning</a></span></li><li><span><a href="#Launch-a-Training-Job-with-the-Best-Hyperparameters" data-toc-modified-id="Launch-a-Training-Job-with-the-Best-Hyperparameters-8.4"><span class="toc-item-num">8.4&nbsp;&nbsp;</span>Launch a Training Job with the Best Hyperparameters</a></span></li><li><span><a href="#Model-Testing-and-Evaluation" data-toc-modified-id="Model-Testing-and-Evaluation-8.5"><span class="toc-item-num">8.5&nbsp;&nbsp;</span>Model Testing and Evaluation</a></span><ul class="toc-item"><li><span><a href="#Getting-Test-Perdictions-Using-AWS-Batch-Transform" data-toc-modified-id="Getting-Test-Perdictions-Using-AWS-Batch-Transform-8.5.1"><span class="toc-item-num">8.5.1&nbsp;&nbsp;</span>Getting Test Perdictions Using AWS Batch Transform</a></span></li><li><span><a href="#Validation-of-Test-Data-using-Kaggle" data-toc-modified-id="Validation-of-Test-Data-using-Kaggle-8.5.2"><span class="toc-item-num">8.5.2&nbsp;&nbsp;</span>Validation of Test Data using Kaggle</a></span></li></ul></li></ul></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Run-Common-Code-Notebook" data-toc-modified-id="Run-Common-Code-Notebook-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Run Common Code Notebook</a></span></li><li><span><a href="#Package-Imports" data-toc-modified-id="Package-Imports-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Package Imports</a></span><ul class="toc-item"><li><span><a href="#Import-Sagemaker-and-Boto3" data-toc-modified-id="Import-Sagemaker-and-Boto3-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Import Sagemaker and Boto3</a></span></li><li><span><a href="#Import-Custom-Packages" data-toc-modified-id="Import-Custom-Packages-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Import Custom Packages</a></span></li></ul></li><li><span><a href="#Global-Variables" data-toc-modified-id="Global-Variables-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Global Variables</a></span></li><li><span><a href="#Load-Raw-Data" data-toc-modified-id="Load-Raw-Data-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Load Raw Data</a></span></li><li><span><a href="#Creating-The-Preprocessing-Pipeline" data-toc-modified-id="Creating-The-Preprocessing-Pipeline-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Creating The Preprocessing Pipeline</a></span></li><li><span><a href="#Data-Preprocessing" data-toc-modified-id="Data-Preprocessing-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Data Preprocessing</a></span><ul class="toc-item"><li><span><a href="#Transforming-Train-and-Test-Data" data-toc-modified-id="Transforming-Train-and-Test-Data-6.1"><span class="toc-item-num">6.1&nbsp;&nbsp;</span>Transforming Train and Test Data</a></span></li><li><span><a href="#Export-csv-files-to-be-used-by-AWS-sagemaker-algorithms:" data-toc-modified-id="Export-csv-files-to-be-used-by-AWS-sagemaker-algorithms:-6.2"><span class="toc-item-num">6.2&nbsp;&nbsp;</span>Export csv files to be used by AWS sagemaker algorithms:</a></span></li></ul></li><li><span><a href="#Benchmark-Logistic-Regression-Model" data-toc-modified-id="Benchmark-Logistic-Regression-Model-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Benchmark Logistic Regression Model</a></span><ul class="toc-item"><li><span><a href="#Benchmark-Model-Definition-and-Training" data-toc-modified-id="Benchmark-Model-Definition-and-Training-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>Benchmark Model Definition and Training</a></span></li><li><span><a href="#Testing-Benchmark-Model-on-Kaggle" data-toc-modified-id="Testing-Benchmark-Model-on-Kaggle-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>Testing Benchmark Model on Kaggle</a></span></li></ul></li><li><span><a href="#XGBoost-Model-using-AWS-Sagemaker" data-toc-modified-id="XGBoost-Model-using-AWS-Sagemaker-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>XGBoost Model using AWS Sagemaker</a></span><ul class="toc-item"><li><span><a href="#Copy-Data-to-S3-Bucket" data-toc-modified-id="Copy-Data-to-S3-Bucket-8.1"><span class="toc-item-num">8.1&nbsp;&nbsp;</span>Copy Data to S3 Bucket</a></span></li><li><span><a href="#Define-S3-Data-Channel-Inputs" data-toc-modified-id="Define-S3-Data-Channel-Inputs-8.2"><span class="toc-item-num">8.2&nbsp;&nbsp;</span>Define S3 Data Channel Inputs</a></span></li><li><span><a href="#Hyperparameter-Tuning" data-toc-modified-id="Hyperparameter-Tuning-8.3"><span class="toc-item-num">8.3&nbsp;&nbsp;</span>Hyperparameter Tuning</a></span></li><li><span><a href="#Launch-a-Training-Job-with-the-Best-Hyperparameters" data-toc-modified-id="Launch-a-Training-Job-with-the-Best-Hyperparameters-8.4"><span class="toc-item-num">8.4&nbsp;&nbsp;</span>Launch a Training Job with the Best Hyperparameters</a></span></li><li><span><a href="#Model-Testing-and-Evaluation" data-toc-modified-id="Model-Testing-and-Evaluation-8.5"><span class="toc-item-num">8.5&nbsp;&nbsp;</span>Model Testing and Evaluation</a></span><ul class="toc-item"><li><span><a href="#Getting-Test-Perdictions-Using-AWS-Batch-Transform" data-toc-modified-id="Getting-Test-Perdictions-Using-AWS-Batch-Transform-8.5.1"><span class="toc-item-num">8.5.1&nbsp;&nbsp;</span>Getting Test Perdictions Using AWS Batch Transform</a></span></li><li><span><a href="#Validation-of-Test-Data-using-Kaggle" data-toc-modified-id="Validation-of-Test-Data-using-Kaggle-8.5.2"><span class="toc-item-num">8.5.2&nbsp;&nbsp;</span>Validation of Test Data using Kaggle</a></span></li></ul></li></ul></li><li><span><a href="#Summary-Comparison-Between-the-Final-Model-and-the-Benchmark" data-toc-modified-id="Summary-Comparison-Between-the-Final-Model-and-the-Benchmark-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Summary Comparison Between the Final Model and the Benchmark</a></span></li></ul></div>
 </div>
 </div>
 </div>
@@ -13130,6 +13130,19 @@ Overwriting ../src/helper_functions.py
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[500]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -13958,6 +13971,39 @@ upload: ../input/data/processed/valid.csv to s3://fady-aws-mlnd-capstone-arvato/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[527]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xgboost_image</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[527]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;683313688378.dkr.ecr.us-east-1.amazonaws.com/sagemaker-xgboost:1.3-1&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[329]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -14517,7 +14563,7 @@ upload: ../input/data/processed/valid.csv to s3://fady-aws-mlnd-capstone-arvato/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[577]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># output latex table for report</span>
@@ -14532,7 +14578,11 @@ upload: ../input/data/processed/valid.csv to s3://fady-aws-mlnd-capstone-arvato/
 <span class="n">hpo_analytics_df_output</span><span class="p">[</span><span class="n">int_cols</span><span class="p">]</span> <span class="o">=</span> <span class="n">hpo_analytics_df_output</span><span class="p">[</span><span class="n">int_cols</span><span class="p">]</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 <span class="n">hpo_analytics_df_output</span> <span class="o">=</span> <span class="n">hpo_analytics_df_output</span><span class="o">.</span><span class="n">transpose</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">hpo_analytics_df_output</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;hyperparameter&#39;</span><span class="p">,</span> <span class="o">*</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n_jobs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
-<span class="n">hpo_analytics_df_output</span><span class="p">[</span><span class="s1">&#39;hyperparameter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hpo_analytics_df_output</span><span class="p">[</span><span class="s1">&#39;hyperparameter&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39;\_&#39;</span><span class="p">)</span>
+<span class="c1">#hpo_analytics_df_output[&#39;hyperparameter&#39;] = hpo_analytics_df_output[&#39;hyperparameter&#39;].str.replace(&#39;_&#39;, &#39;\_&#39;)</span>
+
+<span class="n">hpo_analytics_df_output</span><span class="p">[</span><span class="s1">&#39;hyperparameter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hpo_analytics_df_output</span><span class="p">[</span><span class="s1">&#39;hyperparameter&#39;</span><span class="p">]</span>\
+<span class="o">.</span><span class="n">str</span>\
+<span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^(.*)$&#39;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">code{&#39;\1&#39;}&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14542,7 +14592,7 @@ upload: ../input/data/processed/valid.csv to s3://fady-aws-mlnd-capstone-arvato/
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[492]:</div>
+<div class="prompt input_prompt">In&nbsp;[578]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">save_latex_table</span><span class="p">(</span>
@@ -15091,7 +15141,7 @@ rule_output_path : s3://fady-aws-mlnd-capstone-arvato/output/xgboost-training-ar
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[344]:</div>
+<div class="prompt input_prompt">In&nbsp;[526]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Copy the results of the transformation to local directory</span>
@@ -15175,6 +15225,170 @@ Successfully submitted to Udacity+Arvato: Identify Customer Segments</pre>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Summary-Comparison-Between-the-Final-Model-and-the-Benchmark">Summary Comparison Between the Final Model and the Benchmark<a class="anchor-link" href="#Summary-Comparison-Between-the-Final-Model-and-the-Benchmark">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[521]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+<span class="p">{</span>
+    <span class="s1">&#39;Model&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Benchmark&#39;</span><span class="p">,</span> <span class="s1">&#39;Benchmark&#39;</span><span class="p">,</span> <span class="s1">&#39;XGBoost Model&#39;</span><span class="p">,</span> <span class="s1">&#39;XGBoost Model&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Kaggle AUC-ROC score&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;private&#39;</span><span class="p">,</span> <span class="s1">&#39;public&#39;</span><span class="p">,</span> <span class="s1">&#39;private&#39;</span><span class="p">,</span> <span class="s1">&#39;public&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.71265</span><span class="p">,</span> <span class="mf">0.71541</span><span class="p">,</span> <span class="mf">0.75675</span><span class="p">,</span> <span class="mf">0.79368</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[522]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_summary</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[522]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Kaggle AUC-ROC score</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Benchmark</td>
+      <td>private</td>
+      <td>0.71265</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Benchmark</td>
+      <td>public</td>
+      <td>0.71541</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>XGBoost Model</td>
+      <td>private</td>
+      <td>0.75675</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>XGBoost Model</td>
+      <td>public</td>
+      <td>0.79368</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[525]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">figsize</span> <span class="o">=</span> <span class="n">set_report_fig_size</span><span class="p">(</span><span class="n">fraction</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_summary</span><span class="p">,</span> 
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Model&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Kaggle AUC-ROC score&quot;</span><span class="p">,</span>
+    <span class="n">ci</span><span class="o">=</span><span class="s2">&quot;sd&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set2&quot;</span><span class="p">,</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="n">figsize</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="n">aspect</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_figures</span><span class="p">,</span> <span class="s1">&#39;08_score-comparison.pdf&#39;</span><span class="p">),</span> <span class="n">backend</span><span class="o">=</span><span class="s1">&#39;pgf&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/media/fady/data_shared/misc/portable-programs/linux/anaconda3/envs/aws-ml-nd/lib/python3.8/site-packages/seaborn/axisgrid.py:88: UserWarning: This figure was using constrained_layout, but that is incompatible with subplots_adjust and/or tight_layout; disabling constrained_layout.
+  self._figure.tight_layout(*args, **kwargs)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
