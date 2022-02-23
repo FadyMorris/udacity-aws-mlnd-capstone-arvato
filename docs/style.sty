@@ -1,0 +1,24 @@
+\usepackage{hyperref} % Clickable URLs and cross-references.
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\hypersetup{colorlinks=true, linkcolor=blue}
+\usepackage{titling} %To add a picture to cover page
+\usepackage[pdftex]{graphicx}
+\graphicspath{{./logo/}{../output/img/}{../output/figures/}} %setting graphics paths
+\usepackage{amsmath, amssymb, color, mathtools}
+\usepackage{subcaption, float} %for subfigures
+\usepackage{longtable, booktabs}
+\usepackage{csvsimple} % a packagegs that loads csv file into tables
+\usepackage[T1]{fontenc} %To correctly display underscore characters that are read from csv files
+\usepackage{enumitem} %creating cross-reference to enumerate item
+\usepackage{lettrine} %Big initial letter in the article (drop cap)
+\usepackage{tabularx}
+
+\setlist[enumerate]{itemsep=0mm} %Decrease the distance between enumerate item 
+\setlength{\parskip}{1ex} %spacing between paragraphs
+%---------------- bibliography ------------------
+%\usepackage[style=authoryear-ibid, backend=biber]{biblatex}
+\usepackage[style=alphabetic, backend=biber]{biblatex}
+\addbibresource{references.bib}
+% -----------------------------------------------
+\newcommand{\code}[1]{\mintinline{python}{#1}}

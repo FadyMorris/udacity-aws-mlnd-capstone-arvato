@@ -1,0 +1,152 @@
+\documentclass[a4paper]{article}
+\usepackage{style}
+\title{\bfseries AWS Machine Learning Engineer Nanodegree \\ Capstone Proposal \\ Arvato Customer Acquisition Prediction Using Supervised Learning}
+\author{Fady Morris Milad Ebeid}
+
+
+\usepackage[newfloat]{minted} %the newfloat option places caption on top of listings
+\definecolor{bg}{rgb}{0.95,0.95,0.95} %code background color
+
+
+\begin{document}
+\pagenumbering{roman}
+\pretitle{%from package titling
+  \begin{center}
+    \LARGE
+    \includegraphics[width=0.75\textwidth]{udacity-logo}\\[\bigskipamount]
+  }
+
+\date{\today}
+\maketitle
+\newpage
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic}
+\section{Domain Background}
+\lettrine[lines=3,findent=2pt, lraise=0.2]{\fbox{\textbf{A}}}{rvato} is a company that provides financial services, IT services, and supply chain management services solutions to other businesses. It has a large base of global customers. It's solutions focus on automation and data analytics.\cite{arvato-company}
+
+Arvato's customer base come from a wide variety of businesses, such as insurance companies, telecommunications, media education and e-commrece. 
+
+Arvato analytics is helping businesses to take important decisions ang gain insights from data. It uses data science and machine learning to meet business goals and gain customer satisfaction.
+
+Arvato is owned by Bertelsmann \cite{bertelsmann-company}, which is a media, services and education company that operates in about 50 countries around the world.
+
+In this project, Arvato is helping a mail-order company that sells organic products in Germany to build a model to predict which individuals are most likely to convert into becoming customers for the company by analyzing marketing campain mailout data.
+
+Customer retention and churn were addressed in the following academic research papers: 
+\parencite{al-shatnwai_predicting_2020} and \cite{zhuang_research_2018}
+
+
+\section{Problem Statement}
+
+The problem can be stated as: `` Given the existing marketing campain demographic data of customers who responded to marketing mails, how can we predict whether a new person will be a potential customer for the mail-order company?''
+
+A supervised learning algorithm will be used to train a model that will help the company make such predictions and decide whether is a person is a potential candidate to be a customer for the company or not.
+
+\section{Datasets and Inputs}
+\label{sec:datasets-inputs}
+The dataset is a private dataset. It is used with permission from Arvato for use in the nanodegree project.
+
+There are two files of the dataset that we are concerned with:
+\begin{itemize}
+\item \texttt{Udacity\_MAILOUT\_052018\_TRAIN.csv}: Demographic data for people in Germany that were targeted by the marketing mailing campain. It contians data for 42,982 individuals.
+
+  This training daataset has 367 columns, 366 of them are demographic features and 1 label column \mintinline{python}{'RESPONSE'}
+\item \texttt{Udacity\_MAILOUT\_052018\_TEST.csv}: The testing dataset, It contains data for 42,833 individuals and it has it has 366 columns of the demographic features, this dataset has no label columns and will be tested using kaggle api for \href{https://www.kaggle.com/c/udacity-arvato-identify-customers/data}{Udacity+Arvato: Identify Customer Segments} competition.
+\end{itemize}
+
+There are also two metadata files that contain a data dictionary for the demographic features in the previous dataset files.
+
+\begin{itemize}
+\item \texttt{DIAS Information Levels - Attributes 2017.xlsx}: An excel sheet that contains a top-level organization of demographic features, their description and some notes.
+\item \texttt{DIAS Attributes - Values 2017.xlsx}: An excel sheet that contains demographic features sorted alphabetically, their description, their values, and meaning of each value.
+\end{itemize}
+
+\pagebreak
+A quick examination of the dataset showed that the dataset is highly skewed (imbalanced). only 1.24\% of the individuals targeted by the marketing campaign would respond to it as shown in the following table:
+
+\begin{tabular}{lrr}
+\toprule
+RESPONSE &  count &  percentage \\
+\midrule
+0 &     42430 &     98.76\% \\
+1 &       532 &      1.24\% \\
+\bottomrule
+\end{tabular}
+
+\section{Solution Statement}
+  \label{sec:solution-statement}
+  In this project I will use the provided data to predict whether an individual will be a customer for the mail-order company or not.
+  The general solution steps are:
+  \begin{itemize}
+  \item The data will be pre-processed. The data will be explored for missing values, invalid values outside the range defined in \texttt{DIAS Attributes - Values 2017.xlsx}.
+    Then, categorical features will be encoded as numerical features. Finally, The features will be $z$-scaled and normalized to have similar ranges of values and accelerate learning convergence.
+  \item A supervised machine learning algorithm will be used to train a model on the training dataset in \texttt{Udacity\_MAILOUT\_052018\_TRAIN.csv}, using the column \mintinline{python}{'RESPONSE'} as a label for training.
+
+    Some of the candidate algorithms for model training are logistic regression, decision tree classifier, random forest and XGBoost.
+  \item Hyperparameter tuning of model hyperparameters to obtain the best performance metric. I will use AWS Sage maker Hyperparameter Tuning Job for this task.
+  \item The trained model will be tested using the test set from \texttt{Udacity\_MAILOUT\_052018\_TEST.csv} and the results will be validated using kaggle api for the competition \href{https://www.kaggle.com/c/udacity-arvato-identify-customers/data}{Udacity+Arvato: Identify Customer Segments}.
+  \end{itemize}
+
+  For full details of the technologies and techniques that will be used for the solution refer to Section \ref{sec:project-design} - \nameref{sec:project-design}.
+
+  
+\section{Benchmark Model}
+\label{sec:benchmark-model}
+
+A benchmark model will be a simple Logistic Regression model trained using the default hyperparameters. Other proposed supervised learning model will be compared to this baseline model in terms of performance and training time.
+
+\section{Evaluation Metrics}
+\label{sec:evaluation-metrics}
+ 
+Since this is a binary classification problem, and the dataset is imbalanced as shown in Section \ref{sec:datasets-inputs} - \nameref{sec:datasets-inputs}, the proposed classification metrics are:
+
+\begin{itemize}
+\item F1 Score.
+\item Area under the receiver operating curve (AUROC).
+\end{itemize}
+
+Since the dataset is highly skewed, then accuracy score will not be a good choice for such a problem.
+
+Some of the records from \texttt{Udacity\_MAILOUT\_052018\_TRAIN.csv} will be used as a validation dataset and the performance metric will be compared against.
+
+% $$\text{Accuracy} = \frac{\text{Number of correct predictions}}{\text{Total number of predictions}}$$
+
+% $$\texttt{accuracy}(y, \hat{y}) = \frac{1}{n_\text{samples}} \sum_{i=0}^{n_\text{samples}-1} 1(\hat{y}_i = y_i)$$
+
+\newpage
+\section{Project Design}
+\label{sec:project-design}
+
+In this project I will use \href{https://aws.amazon.com/}{Amazon Web Services} and their \href{https://aws.amazon.com/sagemaker/}{Sagemaker} Compute Instances for data cleaning, model training, hyperparameter tuning and generating predictions.
+
+Amazon SageMaker is a fully managed cloud computing service that provides a machine learning engineer with the ability to prepare build, train, and make inferences for machine learning models quickly.
+
+\begin{enumerate}
+\item The dataset files in Section \ref{sec:datasets-inputs} - \nameref{sec:datasets-inputs} will be uploaded to an \href{https://aws.amazon.com/s3/}{Amazon S3} bucket.
+\item Data pre-processing, cleaning, exploration and feature engineering: The data the data will be checked for missing values. Invalid values will be spotted and fixed using the provided metadata file \texttt{DIAS Attributes - Values 2017.xlsx}
+
+  The pre-processing step will be completed inside an \href{https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html}{Amazon Sagemaker Notebook Instance}
+\item A baseline \href{https://scikit-learn.org/stable/}{Scikit-learn} logistic regression model will be trained on the dataset, the metric obtained will be recorded for future reference.
+\item Candidate supervised learning models will be evaluated against the dataset and the best performing model will be selected.
+\item Hyperparameter tuning will be done on the selected model using a \href{https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning.html}{Sagemaker Hyperparameter Tuning job}. This step will use regression on the hyperparameter search space to find the best and optimal hyperparameters to train the model.
+\item Model training using the best hyperparameters obtained in the previous steps. I will use one of \href{https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html}{Amazon Sagemaker built-in algorithm images} for model training using appropriate \href{https://aws.amazon.com/ec2/instance-types/}{compute instance}.
+\item Generating Predictions: The test dataset from \texttt{Udacity\_MAILOUT\_052018\_TEST.csv} will be used by the final model trained in the previous step to generate predictions that can be evaluated using  Kaggle API for the \href{https://www.kaggle.com/c/udacity-arvato-identify-customers/data}{Udacity+Arvato: Identify Customer Segments} competition.
+\end{enumerate}
+
+
+\newpage
+%\section{References}
+\printbibliography[heading=bibintoc]
+
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% LaTeX-command: "latex -shell-escape"
+%%% TeX-master: t
+%%% End:
